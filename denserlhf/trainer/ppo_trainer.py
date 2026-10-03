@@ -59,7 +59,7 @@ class PPOTrainer(ABC):
         ppo_reward_type: str = "segment_normalization",
         agg_func: str = "avg",
         segment_method: str = "peak",
-        model_type: str = "phi3",
+        model_type: str = "qwen3",
         reward_fit_dataset: str = "preference700k",
         **generate_kwargs,
     ) -> None:

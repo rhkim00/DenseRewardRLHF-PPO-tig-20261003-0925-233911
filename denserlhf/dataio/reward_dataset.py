@@ -36,6 +36,8 @@ class PreferenceDataset(Dataset):
         self.metadatas = []
         self.model_type = model_type
         self.label_pad_token_id = label_pad_token_id
+        # Qwen3 응답 종료 토큰 (Qwen3-8B tokenizer의 eos_token과 동일, Base 모델은 eos가 <|endoftext|>라 명시적으로 지정)
+        self.im_end_token_id = self.tokenizer.convert_tokens_to_ids("<|im_end|>") if model_type == "qwen3" else None
 
         self.prompt_text = []
         self.complete_chosen_text = []
@@ -80,9 +82,18 @@ class PreferenceDataset(Dataset):
 
         batch = {}
 
-        chosen_text = self.tokenizer.apply_chat_template([chosen[-1]], tokenize=False, add_generation_prompt=False)
-        rejected_text = self.tokenizer.apply_chat_template([rejected[-1]], tokenize=False, add_generation_prompt=False)
-        prompt_text = self.tokenizer.apply_chat_template(prompt, tokenize=False, add_generation_prompt=False)
+        if self.model_type == "qwen3":
+            # Qwen3 chat template은 user 턴이 없으면 예외를 던지므로 응답에 template을 따로 적용하지 않는다.
+            # prompt는 PPO rollout과 같은 형태(thinking off)로 맞추고, 응답은 content + <|im_end|>.
+            prompt_text = self.tokenizer.apply_chat_template(
+                prompt, tokenize=False, add_generation_prompt=True, enable_thinking=False
+            )
+            chosen_text = chosen[-1]["content"].strip() + "<|im_end|>"
+            rejected_text = rejected[-1]["content"].strip() + "<|im_end|>"
+        else:
+            chosen_text = self.tokenizer.apply_chat_template([chosen[-1]], tokenize=False, add_generation_prompt=False)
+            rejected_text = self.tokenizer.apply_chat_template([rejected[-1]], tokenize=False, add_generation_prompt=False)
+            prompt_text = self.tokenizer.apply_chat_template(prompt, tokenize=False, add_generation_prompt=False)
 
         if 'phi' in self.model_type.lower():
             if chosen_text.endswith(self.tokenizer.eos_token):
@@ -115,7 +126,9 @@ class PreferenceDataset(Dataset):
 
 
         if self.print_cnt % 1000 == 0:
-            if 'phi' in self.model_type.lower():
+            if self.model_type == "qwen3":
+                self.strategy.print('\nuse Qwen3 chat template (enable_thinking=False)')
+            elif 'phi' in self.model_type.lower():
                 self.strategy.print('\nuse Phi3 chat template')
             elif '<|eot_id|>' in self.tokenizer.chat_template:
                 self.strategy.print('\nuse Meta llama chat template')
@@ -146,7 +159,10 @@ class PreferenceDataset(Dataset):
             }
         
         if len(chosen_tokens["input_ids"]):
-            if 'phi' in self.model_type.lower():
+            if self.model_type == "qwen3":
+                chosen_tokens["input_ids"][-1] = self.im_end_token_id
+                chosen_tokens["attention_mask"][-1] = True
+            elif 'phi' in self.model_type.lower():
                 chosen_tokens["input_ids"][-1] = 32007
                 chosen_tokens["attention_mask"][-1] = True
             else:
@@ -154,7 +170,10 @@ class PreferenceDataset(Dataset):
                 chosen_tokens["attention_mask"][-1] = True
 
         if len(rejected_tokens["input_ids"]):
-            if 'phi' in self.model_type.lower():
+            if self.model_type == "qwen3":
+                rejected_tokens["input_ids"][-1] = self.im_end_token_id
+                rejected_tokens["attention_mask"][-1] = True
+            elif 'phi' in self.model_type.lower():
                 rejected_tokens["input_ids"][-1] = 32007
                 rejected_tokens["attention_mask"][-1] = True
             else:

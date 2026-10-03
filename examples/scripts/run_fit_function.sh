@@ -14,7 +14,9 @@ huggingface-cli login --token $HF_TOKEN
 
 batch_size=8
 
-if [[ "${model}" == *"Phi"* ]]; then
+if [[ "${model}" == *"Qwen3"* || "${model}" == *"qwen3"* ]]; then
+    ref_model_id="Qwen/Qwen3-8B"
+elif [[ "${model}" == *"Phi"* ]]; then
     ref_model_id="microsoft/Phi-3-mini-4k-instruct"
 elif [[ "${model}" == *"llama"* && "${model}" == *"sft"* ]]; then
     ref_model_id="RLHFlow/LLaMA3-SFT-v2"

@@ -127,6 +127,20 @@ def get_llm_for_sequence_regression(
         **kwargs,
     )
 
+    # NOTE: For reward model training only, intialize value_head manually
+    # because deepspeed.zero.Init() will not intialize them.
+    # Done before LoRA wrapping so the modules_to_save copy of the value head starts from this init.
+    # TODO: Find a better way to clarify reward model training.
+    if init_value_head:
+        value_head = getattr(model, value_head_prefix)
+        if dschf is not None:
+            logger.info("initialize value_head for ZeRO-3 reward model training.")
+            with deepspeed.zero.GatheredParameters([value_head.weight], modifier_rank=0):
+                if torch.distributed.get_rank() == 0:
+                    value_head.weight.data.normal_(mean=0.0, std=1 / (config.hidden_size + 1))
+        else:
+            value_head.weight.data.normal_(mean=0.0, std=1 / (config.hidden_size + 1))
+
     # LoRA
     if lora_rank > 0:
         model.enable_input_require_grads()
@@ -136,6 +150,9 @@ def get_llm_for_sequence_regression(
             target_modules=target_modules,
             lora_dropout=lora_dropout,
             bias="none",
+            # value head is newly initialized: keep it trainable and save it together with the adapter,
+            # otherwise PeftModel.from_pretrained(base_rm, adapter) in PPO gets a random value head
+            modules_to_save=[value_head_prefix],
         )
         model = get_peft_model(model, lora_config)
 
@@ -157,19 +174,6 @@ def get_llm_for_sequence_regression(
 
     # https://github.com/huggingface/transformers/issues/26877
     model.config.use_cache = False
-
-    # NOTE: For reward model training only, intialize value_head manually
-    # because deepspeed.zero.Init() will not intialize them.
-    # TODO: Find a better way to clarify reward model training.
-    if init_value_head:
-        value_head = getattr(model, value_head_prefix)
-        if dschf is not None:
-            logger.info("initialize value_head for ZeRO-3 reward model training.")
-            with deepspeed.zero.GatheredParameters([value_head.weight], modifier_rank=0):
-                if torch.distributed.get_rank() == 0:
-                    value_head.weight.data.normal_(mean=0.0, std=1 / (config.hidden_size + 1))
-        else:
-            value_head.weight.data.normal_(mean=0.0, std=1 / (config.hidden_size + 1))
 
     return model
 

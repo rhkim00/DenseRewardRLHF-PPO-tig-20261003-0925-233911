@@ -8,7 +8,7 @@ from transformers.trainer import get_scheduler
 from denserlhf.dataio import PreferenceDataset
 from denserlhf.models import get_llm_for_sequence_regression, Actor
 from denserlhf.trainer import RewardModelTrainer
-from denserlhf.utils import blending_datasets, get_strategy, get_tokenizer
+from denserlhf.utils import DEFAULT_PRETRAIN, blending_datasets, get_model_type, get_strategy, get_tokenizer
 
 
 def train(args):
@@ -190,7 +190,7 @@ if __name__ == "__main__":
     parser.add_argument("--disable_fast_tokenizer", action="store_true", default=False)
 
     # Models
-    parser.add_argument("--pretrain", type=str, default=None)
+    parser.add_argument("--pretrain", type=str, default=DEFAULT_PRETRAIN, help="RM backbone (default: Qwen/Qwen3-8B)")
     parser.add_argument("--value_head_prefix", type=str, default="score")
 
     # Context Parallel
@@ -294,16 +294,7 @@ if __name__ == "__main__":
         args.wandb_project = 'denserlhf_train_rm'
         args.use_wandb = True
 
-    if 'phi' in args.pretrain.lower() and 'instruct' in args.pretrain.lower():
-        model_type = 'phi3-instruct'
-    elif 'phi' in args.pretrain.lower() and 'sft' in args.pretrain.lower():
-        model_type = 'phi3-sft'
-    elif 'llama3-sft-v2' in args.pretrain.lower():
-        model_type = 'rlhflow_llama_3_sft_8b_v2'
-    elif 'llama-3.1-8b-instruct' in args.pretrain.lower():
-        model_type = 'meta_llama_3_1_instruct_8b'
-    else:
-        model_type = 'debug'
+    model_type = get_model_type(args.pretrain)
 
     args.wandb_run_name = (
         f"{args.exp_prefix}_{model_type}_"

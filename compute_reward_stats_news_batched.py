@@ -13,7 +13,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     
     # 모델/데이터 경로
-    parser.add_argument("--base_model", type=str, default="microsoft/Phi-3.5-mini-instruct")
+    parser.add_argument("--base_model", type=str, default="Qwen/Qwen3-8B")
     parser.add_argument("--rm_adapter", type=str, default="./exp/final_model")
     parser.add_argument("--dataset", type=str, default="RyunHo/news_prompt")
     parser.add_argument("--split", type=str, default="train[:]")

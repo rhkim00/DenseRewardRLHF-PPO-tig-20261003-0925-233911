@@ -16,7 +16,7 @@ class CustomPromptDataset(Dataset):
         dataset,
         tokenizer,
         strategy,
-        model_type='phi',
+        model_type='qwen3',
     ) -> None:
         super().__init__()
         self.strategy = strategy
@@ -37,32 +37,33 @@ class CustomPromptDataset(Dataset):
             else:
                 messages = raw_prompt[:-1]
                 
-            if 'phi' in self.model_type.lower():
+            if self.model_type == 'qwen3':
+                # Qwen3: 일반 응답 모드(thinking off). <|im_end|>는 턴 구분자이므로 제거하지 않는다
+                prompt = self.tokenizer.apply_chat_template(
+                    messages, tokenize=False, add_generation_prompt=True, enable_thinking=False
+                )
+            else:
                 prompt = self.tokenizer.apply_chat_template(
                     messages, tokenize=False, add_generation_prompt=True
                 )
-                if self.tokenizer.eos_token is not None:
+                if 'phi' in self.model_type.lower() and self.tokenizer.eos_token is not None:
                     prompt = prompt.replace(self.tokenizer.eos_token, '')
-                else:
-                    prompt = self.tokenizer.apply_chat_template(
-                    messages, tokenize=False, add_generation_prompt=True
-                    )
-                if print_one:
-                    print('\nprompt:', prompt)
-                    print_one = False
-            
-                original_output = ""
-                if "chosen" in data:
-                    try:
-                        original_output = data["chosen"][-1]["content"].strip()
-                    except Exception:
-                        pass
+            if print_one:
+                print('\nprompt:', prompt)
+                print_one = False
 
-                self.prompts.append({
-                    "prompt": prompt,
-                    "messages": messages,
-                    "original_output": original_output
-                })
+            original_output = ""
+            if "chosen" in data:
+                try:
+                    original_output = data["chosen"][-1]["content"].strip()
+                except Exception:
+                    pass
+
+            self.prompts.append({
+                "prompt": prompt,
+                "messages": messages,
+                "original_output": original_output
+            })
             
     def __len__(self):
         length = len(self.prompts)

@@ -14,7 +14,7 @@ from .utils import log_probs_from_logits, reset_position_ids
 def retry(pretrain_or_model, attn_implementation, quantization_config, bf16, device_map, retries=3, delay=30):
     """
     HF 모델 로딩을 재시도하는 함수.
-    - Phi-3.5 계열은 transformers 내장 모델을 쓰기 위해 trust_remote_code=False로 설정.
+    - Phi-3.5 / Qwen3 계열은 transformers 내장 모델을 쓰기 위해 trust_remote_code=False로 설정.
     - 그 외 모델만 trust_remote_code=True 사용.
     """
     # 모델 이름이 문자열인 경우에만 체크
@@ -23,9 +23,11 @@ def retry(pretrain_or_model, attn_implementation, quantization_config, bf16, dev
     # 기본값: remote code 사용
     trust_remote_code = True
 
-    # Phi-3.5-mini-instruct는 transformers 내장 구현을 사용하도록 remote code 비활성화
+    # Phi-3.5-mini-instruct, Qwen3 (transformers>=4.51 내장)는 내장 구현을 사용하도록 remote code 비활성화
     # (microsoft/Phi-3.5-mini-instruct, 또는 비슷한 이름 패턴 모두 커버)
     if "microsoft/phi-3.5-mini-instruct" in model_name or "microsoft/phi_3_5_mini_instruct" in model_name:
+        trust_remote_code = False
+    if "qwen3" in model_name:
         trust_remote_code = False
 
     for attempt in range(retries):
@@ -198,7 +200,14 @@ class Actor(nn.Module):
                 self.strategy.print(f"num_beams: {generate_args['num_beams']}")
                 self.strategy.print(f"early_stopping: {generate_args.get('early_stopping', 'Not set')}")
 
-        if tokenizer.chat_template:
+        model_type = getattr(self.strategy.args, "model_type", None) if self.strategy is not None else None
+        if model_type == "qwen3":
+            # Qwen3: 턴 종료 <|im_end|> + 문서 종료 <|endoftext|> (Qwen3-8B generation_config와 동일)
+            generate_args["eos_token_id"] = [
+                tokenizer.convert_tokens_to_ids("<|im_end|>"),
+                tokenizer.convert_tokens_to_ids("<|endoftext|>"),
+            ]
+        elif tokenizer.chat_template:
             if "<|end|>" in tokenizer.chat_template:
                 generate_args["eos_token_id"] = [32000, 32007]
             elif self.strategy.args.model_type == "rlhflow_llama_3_sft_8b_v2":
@@ -220,7 +229,7 @@ class Actor(nn.Module):
         pad_token_id = generate_args["pad_token_id"]
 
         # phi3
-        if tokenizer.chat_template is not None and "<|end|>" in tokenizer.chat_template:
+        if model_type != "qwen3" and tokenizer.chat_template is not None and "<|end|>" in tokenizer.chat_template:
             end_token_id = generate_args["tokenizer"].encode("<|end|>")[0]
             if self.counter == 0:
                 self.strategy.print('\n For Phi3, we have end_token_id:')
@@ -313,7 +322,8 @@ class Actor(nn.Module):
 
         mask = torch.arange(seq_length).unsqueeze(0).expand(sequences.size(0), -1).to(device=sequences.device)
 
-        attention_mask = (mask >= first_token_indices) & (mask <= eos_indices[0]).to(dtype=torch.long)
+        # per-sample eos index (eos_indices[0] would apply sample 0's length to the whole batch)
+        attention_mask = ((mask >= first_token_indices) & (mask <= eos_indices)).to(dtype=torch.long)
 
         # in RL, state_i (current token) + action_i (next token) -> state_i+1 (next token)
         state_seq = sequences[:, input_len - 1 : -1]
