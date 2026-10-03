@@ -1,5 +1,6 @@
 import argparse
 import itertools
+import json
 import math
 from peft import PeftModel
 import os
@@ -11,7 +12,7 @@ from transformers.trainer import get_scheduler
 from denserlhf.dataio import CustomPromptDataset
 from denserlhf.models import Actor, get_llm_for_sequence_regression
 from denserlhf.trainer import PPOTrainer
-from denserlhf.utils import blending_datasets, get_strategy, get_tokenizer
+from denserlhf.utils import DEFAULT_PRETRAIN, blending_datasets, get_model_type, get_strategy, get_tokenizer
 
 
 def train(args):
@@ -105,7 +106,17 @@ def train(args):
         )
 
         if is_lora_adapter:
-            # 1) base RM = actor와 같은 pretrain 모델 (예: microsoft/Phi-3.5-mini-instruct)
+            # adapter가 다른 backbone(예: 이전 Phi-3.5 RM)으로 학습된 경우 shape mismatch가 나므로 미리 막는다
+            with open(os.path.join(reward_pretrain, "adapter_config.json"), "r") as f:
+                adapter_base = json.load(f).get("base_model_name_or_path") or ""
+            if adapter_base and get_model_type(adapter_base) != args.model_type:
+                raise ValueError(
+                    f"Reward LoRA adapter `{reward_pretrain}` was trained on `{adapter_base}`, "
+                    f"but --pretrain is `{args.pretrain}`. Re-train the reward model with the same backbone "
+                    f"(e.g. `--pretrain {args.pretrain}` in train_rm)."
+                )
+
+            # 1) base RM = actor와 같은 pretrain 모델 (예: Qwen/Qwen3-8B)
             strategy.print(
                 f"\n[Reward] Load base RM from `{args.pretrain}` "
                 f"+ LoRA adapter from `{reward_pretrain}`"
@@ -456,7 +467,7 @@ if __name__ == "__main__":
     parser.add_argument("--lora_dropout", type=float, default=0)
 
     # Models
-    parser.add_argument("--pretrain", type=str, default=None, help="HF model name or path")
+    parser.add_argument("--pretrain", type=str, default=DEFAULT_PRETRAIN, help="policy backbone (default: Qwen/Qwen3-8B)")
     parser.add_argument("--reward_pretrain", type=str, default=None, help="HF model name or path")
     parser.add_argument("--remote_rm_url", type=str, default=None, help="remote RM API")
     parser.add_argument("--critic_pretrain", type=str, default=None, help="HF model name or path")
@@ -548,17 +559,7 @@ if __name__ == "__main__":
             "You likely want to pass $'\\n' in Bash or \"`n\" in PowerShell."
         )
 
-    if 'phi' in args.pretrain.lower() and 'instruct' in args.pretrain.lower():
-        model_type = 'phi3-instruct'
-    elif 'phi' in args.pretrain.lower() and 'sft' in args.pretrain.lower():
-        model_type = 'phi3-sft'
-    elif 'llama3-sft-v2' in args.pretrain.lower():
-        model_type = 'rlhflow_llama_3_sft_8b_v2'
-    elif 'llama-3.1-8b-instruct' in args.pretrain.lower():
-        model_type = 'meta_llama_3_1_instruct_8b'
-    else:
-        model_type = 'debug'
-        
+    model_type = get_model_type(args.pretrain)
     args.model_type = model_type
     
     args.wandb_run_name = (

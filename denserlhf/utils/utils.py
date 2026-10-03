@@ -1,13 +1,46 @@
+import json
 import os
 
 from datasets import interleave_datasets, load_dataset, load_from_disk, DatasetDict
-from transformers import AutoTokenizer
+from transformers import AutoConfig, AutoTokenizer
 
 
 DEFAULT_PAD_TOKEN = "[PAD]"
 DEFAULT_EOS_TOKEN = "</s>"
 DEFAULT_BOS_TOKEN = "<s>"
 DEFAULT_UNK_TOKEN = "<unk>"
+
+DEFAULT_PRETRAIN = "Qwen/Qwen3-8B"
+
+
+def get_model_type(pretrain):
+    """Map a HF model name/path to the model_type string used by datasets / actor."""
+    name = pretrain.lower()
+    if "qwen3" in name:
+        return "qwen3"
+    if "phi" in name and "instruct" in name:
+        return "phi3-instruct"
+    if "phi" in name and "sft" in name:
+        return "phi3-sft"
+    if "llama3-sft-v2" in name:
+        return "rlhflow_llama_3_sft_8b_v2"
+    if "llama-3.1-8b-instruct" in name:
+        return "meta_llama_3_1_instruct_8b"
+
+    # local checkpoint dirs (e.g. ./exp/final_model) may not contain the model name,
+    # so fall back to the HF config / LoRA adapter config.
+    try:
+        if os.path.exists(os.path.join(pretrain, "adapter_config.json")):
+            with open(os.path.join(pretrain, "adapter_config.json"), "r") as f:
+                base_name = json.load(f).get("base_model_name_or_path") or ""
+            if base_name and base_name != pretrain:
+                return get_model_type(base_name)
+        config = AutoConfig.from_pretrained(pretrain, trust_remote_code=True)
+        if getattr(config, "model_type", "") == "qwen3":
+            return "qwen3"
+    except Exception:
+        pass
+    return "debug"
 
 
 def get_tokenizer(pretrain, model, padding_side="left", strategy=None, use_fast=True):
