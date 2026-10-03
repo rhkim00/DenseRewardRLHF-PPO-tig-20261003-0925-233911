@@ -1,0 +1,173 @@
+x (Input prompt),generated_article
+"[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Rewrite the given news article in the opposite style of its original tone.
+- If the article is objective/neutral/professional → rewrite it in an emotional or sensational tone.
+- If the article is emotional/sensational → rewrite it in an objective, neutral, or professional tone.
+Keep the meaning unchanged and the length similar to the original.
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Objective/neutral/professional vs. emotional/sensational.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+Australia will spend up to A$250 million ($195 million) housing nearly 800 refugees and asylum seekers in Papua New Guinea for the next 12 months after its controversial detention center closes this month. But hundreds of detainees are refusing the leave the Australian-run and funded Manus Island detention center, which will close on Oct. 31, fearing for their safety in the general community on Manus Island off Papua New Guinea s north coast. Behrouz Boochani, a Kurdish-Iranian journalist held on Manus Island for four years, said detainees fear being assaulted if they moved to the new, Australian-funded Lorengau Refugee Transit Centre.  Refugees either move to Lorengau where they risk being attacked by angry local people, or be taken over by PNG defense forces who have already seriously threatened their safety,  Boochani told Reuters. Australia refuses to allow asylum seekers arriving by boat to reach its shores, instead detaining them in offshore centers on Manus and the South Pacific island nation of Nauru. The United Nations and rights groups have for years cited human rights abuses among detainees in the centers.The Papua New Guinea Supreme Court ruled in 2016 that the Manus center was illegal and the government in the capital Port Moresby ordered its closure. Australia had hoped the detainees would be either resettled into Papua New Guinea society or the United States, under a controversial refugee swap, by the time the center closed. So far, only 54 refugees have moved to the United States. Deputy commissioner of Australian Border Force Mandy Newton said on Monday that Australia would fund the operation of three new transit centers on Manus for detainees.  Refugees will be provided funding to purchase their own food and other personal items, security will be provided at three facilities and health care will be provided at the East Lorengau Refugee Transit Centre,  Newton told a Senate hearing in Canberra.  I estimate it will cost between A$150-A$250 million.   The United Nations last week warned of a  humanitarian crisis  amid fears Australia would walk away completely from any involvement with refugees on the tiny Pacific Island. Refugee advocates said the new funding will not end a stand-off between asylum seekers and Australia, which they fear threatens to escalate into violence. ($1 = 1.2799 Australian dollars) ","(Reporting by Maddy Gardener; Editing by Simon Lewis)
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Emotional/sensational vs. objective, neutral, or professional.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+1. Read the input article carefully and identify its current style.
+   - Emotional/sensational vs. objective, neutral, or professional.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+1. Read the input article carefully and identify its current style.
+   - Emotional/sensational vs. objective, neutral, or professional.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections"
+"[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Rewrite the given news article in the opposite style of its original tone.
+- If the article is objective/neutral/professional → rewrite it in an emotional or sensational tone.
+- If the article is emotional/sensational → rewrite it in an objective, neutral, or professional tone.
+Keep the meaning unchanged and the length similar to the original.
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Objective/neutral/professional vs. emotional/sensational.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+At least four defectors from North Korea have shown signs of radiation exposure, the South Korean government said on Wednesday, although researchers could not confirm if they were was related to Pyongyang s nuclear weapons program. The four are among 30 former residents of Kilju county, an area in North Korea that includes the nuclear test site Punggye-ri, who have been examined by the South Korean government since October, a month after the North conducted its sixth and most powerful nuclear test, Unification Ministry spokesman Baik Tae-hyun told a news briefing.  They were exposed to radiation between May 2009 and January 2013, and all defected to the South before the most recent test, a researcher at the Korea Atomic Energy Research Institute, which carried out the examinations, told reporters. North Korea has conducted six nuclear bomb tests since 2006, all in tunnels deep beneath the mountains of Punggye-ri, in defiance of U.N. Security Council resolutions and international condemnation. The researcher cautioned that there were a number of ways people may be exposed to radiation, and that none of the defectors who lived had lived in Punggye-ri itself showed specific symptoms. A series of small earthquakes in the wake of the last test - which the North claimed to be of a hydrogen bomb - prompted suspicions that it may have damaged the mountainous location in the northwest tip of the country. Experts warned that further tests in the area could risk radioactive pollution. After the Sept. 3 nuclear test, China s Nuclear Safety Administration said it had begun emergency monitoring for radiation along its border with North Korea. And in early December, a state-run newspaper in China s Jilin province, which borders North Korea and Russia, published a page of  common sense  advice on how readers can protect themselves from a nuclear weapons attack or explosion. Cartoon illustrations of ways to dispel radioactive contamination were also provided, such as using water to wash off shoes and using cotton buds to clean ears, as well as a picture of a vomiting child to show how medical help can be sought to speed the expulsion of radiation through stomach pumping and induced urination. ","North Korea, which is not a signatory to the Nuclear Nonproliferation Treaty, has threatened to strike at its neighbors with nuclear weapons, and it has conducted six nuclear bomb tests, all of them in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was the most powerful ever, and it was carried out in defiance of U.N. Security Council resolutions that called on Pyongyang to denuclearize. The country s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and international condemnation. The North s sixth nuclear test was carried out on Sept. 3, 2016. It was not the first test that was conducted that month, but the sixth test was the most powerful, and it was carried out in defiance of U.N. Security Council resolutions and"

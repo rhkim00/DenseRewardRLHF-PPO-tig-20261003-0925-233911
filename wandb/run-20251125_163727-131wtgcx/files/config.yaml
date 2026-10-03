@@ -1,0 +1,289 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            uu9tiuhzf8bn07odwzl1vp2uo86lfbrd:
+                args:
+                    - --pretrain
+                    - microsoft/Phi-3.5-mini-instruct
+                    - --dataset
+                    - RyunHo/news_rl
+                    - --num_thresholds
+                    - "1"
+                    - --segment_method
+                    - peak
+                    - --entropy_threshold
+                    - "1000"
+                    - --agg_func
+                    - avg
+                    - --load_in_4bit
+                    - --lora_rank
+                    - "8"
+                    - --lora_alpha
+                    - "16"
+                    - --lora_dropout
+                    - "0.05"
+                    - --target_modules
+                    - q_proj
+                    - k_proj
+                    - v_proj
+                    - o_proj
+                    - --zero_stage
+                    - "2"
+                    - --adam_offload
+                    - --train_batch_size
+                    - "16"
+                    - --micro_train_batch_size
+                    - "16"
+                    - --max_epochs
+                    - "1"
+                    - --max_len
+                    - "448"
+                    - --max_prompt_len
+                    - "384"
+                    - --bf16
+                    - --flash_attn
+                    - --gradient_checkpointing
+                    - --output_root_dir
+                    - ./exp
+                    - --exp_prefix
+                    - rm_news_pref_phi35
+                    - --logging_steps
+                    - "10"
+                    - --save_steps
+                    - "500"
+                    - --eval_steps
+                    - "500"
+                codePath: denserlhf/cli/train_rm.py
+                codePathLocal: denserlhf/cli/train_rm.py
+                cpu_count: 48
+                cpu_count_logical: 48
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "1040428953600"
+                        used: "47409803264"
+                email: kimrh9847@gmail.com
+                executable: /mnt/data1/Ryunho/DenseRewardRLHF-PPO/.venv/bin/python3
+                git:
+                    commit: 6cb62e6179a7f6e009fe260a112d833b131a7ccb
+                    remote: https://github.com/yinyueqin/DenseRewardRLHF-PPO.git
+                gpu: NVIDIA H100 80GB HBM3
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "85520809984"
+                      name: NVIDIA H100 80GB HBM3
+                      uuid: GPU-2f3b51a3-2f85-b9df-b1b1-09bf7d36828b
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "85520809984"
+                      name: NVIDIA H100 80GB HBM3
+                      uuid: GPU-49c95a11-83f3-c59a-c641-d1aec6472a6d
+                host: cloud-RcEaB8
+                memory:
+                    total: "506998345728"
+                os: Linux-5.15.0-161-generic-x86_64-with-glibc2.35
+                program: /mnt/data1/Ryunho/DenseRewardRLHF-PPO/denserlhf/cli/train_rm.py
+                python: CPython 3.10.12
+                root: /mnt/data1/Ryunho/DenseRewardRLHF-PPO
+                startedAt: "2025-11-25T07:37:27.279950Z"
+                writerId: uu9tiuhzf8bn07odwzl1vp2uo86lfbrd
+        m:
+            - "1": train/global_step
+              "6":
+                - 3
+              "7": []
+            - "1": eval/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": train/*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+            - "2": eval/*
+              "5": 2
+              "6":
+                - 1
+              "7": []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 11
+                - 30
+                - 49
+                - 51
+                - 71
+                - 98
+            "2":
+                - 1
+                - 11
+                - 30
+                - 49
+                - 51
+                - 71
+                - 98
+            "3":
+                - 7
+                - 13
+                - 16
+                - 66
+            "4": 3.10.12
+            "5": 0.23.0
+            "6": 4.57.2
+            "10":
+                - 20
+            "12": 0.23.0
+            "13": linux-x86_64
+adam_betas:
+    value:
+        - 0.9
+        - 0.95
+adam_offload:
+    value: true
+agg_func:
+    value: avg
+apply_chat_template:
+    value: false
+aux_loss_coef:
+    value: 0
+bf16:
+    value: true
+chosen_key:
+    value: chosen
+ckpt_path:
+    value: ./exp/ckpts
+compute_fp32_loss:
+    value: false
+dataset:
+    value: RyunHo/news_rl
+dataset_probs:
+    value: "1.0"
+disable_fast_tokenizer:
+    value: false
+disable_trace_cache:
+    value: false
+ds_tensor_parallel_size:
+    value: 1
+entropy_threshold:
+    value: 1000
+eval_split:
+    value: test
+eval_steps:
+    value: 500
+exp_prefix:
+    value: rm_news_pref_phi35
+flash_attn:
+    value: true
+grad_accum_dtype:
+    value: null
+gradient_checkpointing:
+    value: true
+gradient_checkpointing_use_reentrant:
+    value: false
+input_template:
+    value: null
+l2:
+    value: 0
+learning_rate:
+    value: 9e-06
+load_checkpoint:
+    value: false
+load_in_4bit:
+    value: true
+local_rank:
+    value: -1
+logging_steps:
+    value: 10
+lora_alpha:
+    value: 16
+lora_dropout:
+    value: 0.05
+lora_rank:
+    value: 8
+loss:
+    value: sigmoid
+lr_warmup_ratio:
+    value: 0.03
+margin_loss:
+    value: false
+max_ckpt_mem:
+    value: 1e+08
+max_ckpt_num:
+    value: 3
+max_epochs:
+    value: 1
+max_len:
+    value: 448
+max_norm:
+    value: 1
+max_prompt_len:
+    value: 384
+max_samples:
+    value: 1e+08
+micro_train_batch_size:
+    value: 16
+model_type:
+    value: phi3-instruct
+num_thresholds:
+    value: 1
+output_root_dir:
+    value: ./exp
+packing_samples:
+    value: false
+pretrain:
+    value: microsoft/Phi-3.5-mini-instruct
+prompt_key:
+    value: null
+ref_offload:
+    value: false
+rejected_key:
+    value: rejected
+ring_attn_size:
+    value: 1
+ring_head_stride:
+    value: 1
+save_path:
+    value: ./exp/final_model
+save_steps:
+    value: 500
+seed:
+    value: 42
+segment_method:
+    value: peak
+target_modules:
+    value:
+        - q_proj
+        - k_proj
+        - v_proj
+        - o_proj
+tensor_parallel_size:
+    value: 1
+tokenizer_chat_template:
+    value: null
+train_batch_size:
+    value: 16
+train_split:
+    value: train
+use_tensorboard:
+    value: null
+use_wandb:
+    value: true
+value_head_prefix:
+    value: score
+wandb_group:
+    value: null
+wandb_org:
+    value: null
+wandb_project:
+    value: denserlhf_train_rm
+wandb_run_name:
+    value: rm_news_pref_phi35_phi3-instruct_entropy-1000.0_aggfunc-avg_segmethod-peak_20251125T163653
+zero_stage:
+    value: 2
+zpg:
+    value: 1

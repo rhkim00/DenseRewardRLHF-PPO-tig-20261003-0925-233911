@@ -1,0 +1,99 @@
+{
+  "os": "Linux-5.15.0-161-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-11-25T07:42:43.245414Z",
+  "args": [
+    "--pretrain",
+    "microsoft/Phi-3.5-mini-instruct",
+    "--dataset",
+    "RyunHo/news_rl",
+    "--num_thresholds",
+    "1",
+    "--segment_method",
+    "peak",
+    "--entropy_threshold",
+    "1000",
+    "--agg_func",
+    "avg",
+    "--load_in_4bit",
+    "--lora_rank",
+    "8",
+    "--lora_alpha",
+    "16",
+    "--lora_dropout",
+    "0.05",
+    "--target_modules",
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "--zero_stage",
+    "2",
+    "--adam_offload",
+    "--train_batch_size",
+    "16",
+    "--micro_train_batch_size",
+    "16",
+    "--max_epochs",
+    "1",
+    "--max_len",
+    "448",
+    "--max_prompt_len",
+    "384",
+    "--bf16",
+    "--flash_attn",
+    "--gradient_checkpointing",
+    "--output_root_dir",
+    "./exp",
+    "--exp_prefix",
+    "rm_news_pref_phi35",
+    "--logging_steps",
+    "10",
+    "--save_steps",
+    "500",
+    "--eval_steps",
+    "500"
+  ],
+  "program": "/mnt/data1/Ryunho/DenseRewardRLHF-PPO/denserlhf/cli/train_rm.py",
+  "codePath": "denserlhf/cli/train_rm.py",
+  "codePathLocal": "denserlhf/cli/train_rm.py",
+  "git": {
+    "remote": "https://github.com/yinyueqin/DenseRewardRLHF-PPO.git",
+    "commit": "6cb62e6179a7f6e009fe260a112d833b131a7ccb"
+  },
+  "email": "kimrh9847@gmail.com",
+  "root": "/mnt/data1/Ryunho/DenseRewardRLHF-PPO",
+  "host": "cloud-RcEaB8",
+  "executable": "/mnt/data1/Ryunho/DenseRewardRLHF-PPO/.venv/bin/python3",
+  "cpu_count": 48,
+  "cpu_count_logical": 48,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "gpu_count": 2,
+  "disk": {
+    "/": {
+      "total": "1040428953600",
+      "used": "47514234880"
+    }
+  },
+  "memory": {
+    "total": "506998345728"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "memoryTotal": "85520809984",
+      "cudaCores": 16896,
+      "architecture": "Hopper",
+      "uuid": "GPU-2f3b51a3-2f85-b9df-b1b1-09bf7d36828b"
+    },
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "memoryTotal": "85520809984",
+      "cudaCores": 16896,
+      "architecture": "Hopper",
+      "uuid": "GPU-49c95a11-83f3-c59a-c641-d1aec6472a6d"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "3z9awotxyihb1lr60o8r353haaz302v7"
+}

@@ -1,0 +1,49 @@
+x (Input prompt),generated_article
+"[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Using only the provided title/short message, write a fully fictional yet realistic news article via narrative theory.
+- Create/arrange the STORY (events/actions, actors/settings).
+- Choose/structure the DISCOURSE (presentation/order/perspective) into one credible report.
+
+[INTERNAL]
+1) Extract plausible 5W1H candidates from the seed.
+2) Fix a single scenario and a one-sentence thesis.
+3) Set a timeline (setup → key action → outcome/follow-up).
+4) Write the headline and a lead (1?2 sentences, 5W1H).
+5) Expand the body in either inverted-pyramid or chronological order consistently; use generic titles for quotes.
+6) Plausibility/consistency pass; adjust length if needed.
+
+[CONSTRAINTS]
+- Output the article only (no prompts/steps/rules); keep a professional, neutral tone.
+- Avoid inventing precise real names or exact statistics not in the input (prefer generic roles/categories).
+- Length rules:
+  ? If the input is Korean: 700?999 characters (including spaces).
+  ? If the input is English: 700-999 words.
+
+[INPUT TITLE or MESSAGE]
+At U.N., Russia slams inquiry into toxic gas attacks in Syria","Title: Russia Condemns U.N. Inquiry into Syrian Toxic Gas Attacks
+
+In a vehement response to the United Nations' decision to launch an investigation into the use of chemical weapons in Syria, Russian officials have expressed strong disapproval. The Russian Foreign Ministry vehemently criticized the U.N. action, asserting that the inquiry undermines Syria's sovereig0nty and violates international norms. The ministry emphasized that the accusations of chemical attacks are unsubstantiated and politicized, demanding a halt to the investigation.
+
+The decision by the U.N. to probe the alleged use of toxic gases, which Moscow claims are being employed by opposition groups, has led to heightened tensions in the region. Syria, under the leadership of Bashar al-Assad, vehemently denies any involvement in such heinous acts, asserting that the opposition is the actual perpetrator.
+
+Representatives from the Russian delegation at the U.N. have been vocal in their opposition to the resolution, urging member states to recognize the gravity of the situation and the need to refrain from casting aspersions on Syria's conduct. They warned that the investigation could exacerbate an already dire humanitarian crisis, diverting crucial resources from the war-torn nation.
+
+The U.N. Security Council's initiative comes amidst mounting evidence suggesting the use of chemical weapons, which, if confirmed, would constitute a grave violation of international law. The council's members are now faced with the challenge of responding to these allegations while ensuring the safety and well-being of the Syrian populace.
+
+As the international community awaits further developments, the Russian-led stance against the investigation remains a contentious issue, highlighting the deep divisions in global efforts to address the Syrian conflict."

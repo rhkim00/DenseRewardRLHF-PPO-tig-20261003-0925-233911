@@ -1,0 +1,339 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            68fwryyu6x7x990koagbgv87bhfdjmgl:
+                args:
+                    - --pretrain
+                    - microsoft/Phi-3.5-mini-instruct
+                    - --reward_pretrain
+                    - ./exp/final_model
+                    - --prompt_split
+                    - train[:]
+                    - --prompt_data
+                    - RyunHo/news_prompt
+                    - --input_key
+                    - prompt
+                    - --num_episodes
+                    - "1"
+                    - --segment_method
+                    - peak
+                    - --entropy_threshold
+                    - "1000"
+                    - --agg_func
+                    - avg
+                    - --ppo_reward_type
+                    - segment_last_avg
+                    - --value_clip
+                    - "0.2"
+                    - --reward_mean
+                    - "0.0153461"
+                    - --reward_std
+                    - "0.0504346"
+                    - --output_root_dir
+                    - ./exp_ppo
+                    - --zero_stage
+                    - "2"
+                    - --adam_offload
+                    - --load_in_4bit
+                    - --lora_rank
+                    - "16"
+                    - --lora_alpha
+                    - "32"
+                    - --lora_dropout
+                    - "0.05"
+                    - --target_modules
+                    - qkv_proj
+                    - o_proj
+                    - gate_up_proj
+                    - down_proj
+                    - --gradient_checkpointing
+                    - --bf16
+                    - --flash_attn
+                    - --generate_max_len
+                    - "512"
+                    - --train_batch_size
+                    - "16"
+                    - --micro_train_batch_size
+                    - "2"
+                    - --rollout_batch_size
+                    - "16"
+                    - --save_steps
+                    - "500"
+                    - --eval_steps
+                    - "500"
+                    - --wandb_run_name
+                    - ppo_news_zero_rb16
+                codePath: denserlhf/cli/train_ppo.py
+                codePathLocal: denserlhf/cli/train_ppo.py
+                cpu_count: 48
+                cpu_count_logical: 48
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "1040428953600"
+                        used: "66161922048"
+                email: kimrh9847@gmail.com
+                executable: /mnt/data1/Ryunho/DenseRewardRLHF-PPO/.venv/bin/python3
+                git:
+                    commit: 6cb62e6179a7f6e009fe260a112d833b131a7ccb
+                    remote: https://github.com/yinyueqin/DenseRewardRLHF-PPO.git
+                gpu: NVIDIA H100 80GB HBM3
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "85520809984"
+                      name: NVIDIA H100 80GB HBM3
+                      uuid: GPU-2f3b51a3-2f85-b9df-b1b1-09bf7d36828b
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "85520809984"
+                      name: NVIDIA H100 80GB HBM3
+                      uuid: GPU-49c95a11-83f3-c59a-c641-d1aec6472a6d
+                host: cloud-RcEaB8
+                memory:
+                    total: "506998345728"
+                os: Linux-5.15.0-161-generic-x86_64-with-glibc2.35
+                program: /mnt/data1/Ryunho/DenseRewardRLHF-PPO/denserlhf/cli/train_ppo.py
+                python: CPython 3.10.12
+                root: /mnt/data1/Ryunho/DenseRewardRLHF-PPO
+                startedAt: "2025-11-25T11:58:55.221827Z"
+                writerId: 68fwryyu6x7x990koagbgv87bhfdjmgl
+        m:
+            - "1": train/global_step
+              "6":
+                - 3
+              "7": []
+            - "1": eval/epoch
+              "6":
+                - 3
+              "7": []
+            - "2": train/*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+            - "2": eval/*
+              "5": 2
+              "6":
+                - 1
+              "7": []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+                - 11
+                - 30
+                - 49
+                - 51
+                - 71
+                - 98
+            "2":
+                - 1
+                - 11
+                - 30
+                - 49
+                - 51
+                - 71
+                - 98
+            "3":
+                - 7
+                - 13
+                - 16
+                - 66
+            "4": 3.10.12
+            "5": 0.23.0
+            "6": 4.57.2
+            "10":
+                - 20
+            "12": 0.23.0
+            "13": linux-x86_64
+actor_init_on_gpu:
+    value: false
+actor_learning_rate:
+    value: 5e-07
+adam_betas:
+    value:
+        - 0.9
+        - 0.95
+adam_offload:
+    value: true
+agg_func:
+    value: avg
+apply_chat_template:
+    value: false
+aux_loss_coef:
+    value: 0
+bf16:
+    value: true
+ckpt_path:
+    value: ./exp_ppo/ckpts
+critic_learning_rate:
+    value: 9e-06
+critic_pretrain:
+    value: microsoft/Phi-3.5-mini-instruct
+disable_fast_tokenizer:
+    value: false
+disable_trace_cache:
+    value: false
+ds_tensor_parallel_size:
+    value: 1
+enable_ema:
+    value: false
+entropy_threshold:
+    value: 1000
+eps_clip:
+    value: 0.2
+eval_steps:
+    value: 500
+exp_prefix:
+    value: debug
+flash_attn:
+    value: true
+freezing_actor_steps:
+    value: -1
+gamma:
+    value: 1
+generate_max_len:
+    value: 512
+grad_accum_dtype:
+    value: null
+gradient_checkpointing:
+    value: true
+gradient_checkpointing_use_reentrant:
+    value: false
+init_critic_from_rm:
+    value: false
+init_kl_coef:
+    value: 0.01
+input_key:
+    value: prompt
+input_template:
+    value: null
+kl_target:
+    value: null
+l2:
+    value: 0
+lambd:
+    value: 0.95
+load_checkpoint:
+    value: false
+load_in_4bit:
+    value: true
+local_rank:
+    value: -1
+logging_steps:
+    value: 1
+lora_alpha:
+    value: 32
+lora_dropout:
+    value: 0.05
+lora_rank:
+    value: 16
+lr_warmup_ratio:
+    value: 0.03
+max_ckpt_mem:
+    value: 1e+08
+max_ckpt_num:
+    value: 3
+max_epochs:
+    value: 1
+max_len:
+    value: null
+max_norm:
+    value: 1
+max_samples:
+    value: 1000000
+micro_rollout_batch_size:
+    value: 8
+micro_train_batch_size:
+    value: 2
+model_type:
+    value: phi3-instruct
+n_samples_per_prompt:
+    value: 1
+norm_params_path:
+    value: param.json
+normalize_reward:
+    value: false
+num_episodes:
+    value: 1
+num_thresholds:
+    value: 1
+output_root_dir:
+    value: ./exp_ppo
+ppo_reward_type:
+    value: segment_last_avg
+pretrain:
+    value: microsoft/Phi-3.5-mini-instruct
+pretrain_data:
+    value: null
+pretrain_data_probs:
+    value: "1.0"
+pretrain_split:
+    value: train
+prompt_data:
+    value: RyunHo/news_prompt
+prompt_data_probs:
+    value: "1.0"
+prompt_max_len:
+    value: 1024
+prompt_split:
+    value: train[:]
+ptx_coef:
+    value: 0.05
+remote_rm_url:
+    value: null
+reward_fit_dataset:
+    value: ultrafeedback
+reward_mean:
+    value: 0.0153461
+reward_pretrain:
+    value: ./exp/final_model
+reward_std:
+    value: 0.0504346
+rollout_batch_size:
+    value: 16
+save_path:
+    value: ./exp_ppo/models
+save_steps:
+    value: 500
+save_value_network:
+    value: false
+seed:
+    value: 42
+segment_method:
+    value: peak
+target_modules:
+    value:
+        - qkv_proj
+        - o_proj
+        - gate_up_proj
+        - down_proj
+temperature:
+    value: 1
+top_p:
+    value: 1
+train_batch_size:
+    value: 16
+use_tensorboard:
+    value: null
+use_wandb:
+    value: e9cb92075d5998302671f2fd3a02a0ec29d4bda5
+value_clip:
+    value: 0.2
+value_head_prefix:
+    value: score
+wandb_group:
+    value: null
+wandb_org:
+    value: null
+wandb_project:
+    value: debug
+wandb_run_name:
+    value: debug_Ep1_phi3-instruct_fit_ultrafeedback_entropy-1000.0_kl-0.01_value_clip-0.2_ppo_reward_type-segment_last_avg_20251125T2056
+zero_stage:
+    value: 2
+zpg:
+    value: 1

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "id": "233911f0-a77f-4cc5-870b-81fe8a47af1a",
+  "repository": "rhkim00/DenseRewardRLHF-PPO-tig-20261003-0925-233911",
+  "sourceCommit": "6cb62e6179a7f6e009fe260a112d833b131a7ccb",
+  "request": {
+    "title": "이전에 내가 phi를 reward model과 policy model의 backbone으로써 사용했거든? 이 reward, policy model의 backbone을 모두 qwen3-8B 모델로 바꿔주고, 바꾸고 오류 없게 수정해줄래",
+    "requestCategory": "bug",
+    "scope": "이전에 내가 phi를 reward model과 policy model의 backbone으로써 사용했거든? 이 reward, policy model의 backbone을 모두 qwen3-8B 모델로 바꿔주고, 바꾸고 오류 없게 수정해줄래?",
+    "acceptanceChecks": [
+      "이전에 내가 phi를 reward model과 policy model의 backbone으로써 사용했거든?",
+      "이 reward, policy model의 backbone을 모두 qwen3-8B 모델로 바꿔주고, 바꾸고 오류 없게 수정해줄래?"
+    ],
+    "aiRequirement": {
+      "provider": "claude",
+      "model": "opus",
+      "effort": "high",
+      "source": "declared"
+    },
+    "rewardTig": "0",
+    "rewardMultiplier": "1.9",
+    "executionDeadlineAt": "2026-10-04T09:25:45.841Z",
+    "originalRequest": "이전에 내가 phi를 reward model과 policy model의 backbone으로써 사용했거든? 이 reward, policy model의 backbone을 모두 qwen3-8B 모델로 바꿔주고, 바꾸고 오류 없게 수정해줄래?",
+    "context": "Project folder: DenseRewardRLHF-PPO. Git: branch main at 6cb62e6; 14 changed and 104216 new file(s) not yet committed. Tracked files: 113. Top level: .gitignore, LICENSE, README.md, denserlhf, dockerfile, examples, method.png, pyproject.toml, requirements.txt, reward-bench, setup.py, useful_code, … (13 entries).",
+    "completedWork": "Recent commits: \"update README\"; \"Update README\"; \"first commit\".",
+    "constraints": [],
+    "setupSteps": [
+      "pip install -r requirements.txt",
+      "pip install -e ."
+    ],
+    "testSteps": [
+      "pytest"
+    ]
+  },
+  "layout": "tree"
+}

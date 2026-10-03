@@ -1,0 +1,313 @@
+input_prompt,generated_article
+"[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Rewrite the given news article in the opposite style of its original tone.
+- If the article is objective/neutral/professional → rewrite it in an emotional or sensational tone.
+- If the article is emotional/sensational → rewrite it in an objective, neutral, or professional tone.
+Keep the meaning unchanged and the length similar to the original.
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Objective/neutral/professional vs. emotional/sensational.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+Australia will spend up to A$250 million ($195 million) housing nearly 800 refugees and asylum seekers in Papua New Guinea for the next 12 months after its controversial detention center closes this month. But hundreds of detainees are refusing the leave the Australian-run and funded Manus Island detention center, which will close on Oct. 31, fearing for their safety in the general community on Manus Island off Papua New Guinea s north coast. Behrouz Boochani, a Kurdish-Iranian journalist held on Manus Island for four years, said detainees fear being assaulted if they moved to the new, Australian-funded Lorengau Refugee Transit Centre.  Refugees either move to Lorengau where they risk being attacked by angry local people, or be taken over by PNG defense forces who have already seriously threatened their safety,  Boochani told Reuters. Australia refuses to allow asylum seekers arriving by boat to reach its shores, instead detaining them in offshore centers on Manus and the South Pacific island nation of Nauru. The United Nations and rights groups have for years cited human rights abuses among detainees in the centers.The Papua New Guinea Supreme Court ruled in 2016 that the Manus center was illegal and the government in the capital Port Moresby ordered its closure. Australia had hoped the detainees would be either resettled into Papua New Guinea society or the United States, under a controversial refugee swap, by the time the center closed. So far, only 54 refugees have moved to the United States. Deputy commissioner of Australian Border Force Mandy Newton said on Monday that Australia would fund the operation of three new transit centers on Manus for detainees.  Refugees will be provided funding to purchase their own food and other personal items, security will be provided at three facilities and health care will be provided at the East Lorengau Refugee Transit Centre,  Newton told a Senate hearing in Canberra.  I estimate it will cost between A$150-A$250 million.   The United Nations last week warned of a  humanitarian crisis  amid fears Australia would walk away completely from any involvement with refugees on the tiny Pacific Island. Refugee advocates said the new funding will not end a stand-off between asylum seekers and Australia, which they fear threatens to escalate into violence. ($1 = 1.2799 Australian dollars) ","[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Rewrite the given news article in the opposite style of its original tone.
+- If the article is objective/neutral/professional → rewrite it in an emotional or sensational tone.
+- If the article is emotional/sensational → rewrite it in an objective, neutral, or professional tone.
+Keep the meaning unchanged and the length similar to the original.
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Objective/neutral/professional vs. emotional/sensational.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+Australia will spend up to A$250 million ($195 million) housing nearly 800 refugees and asylum seekers in Papua New Guinea for the next 12 months after its controversial detention center closes this month. But hundreds of detainees are refusing the leave the Australian-run and funded Manus Island detention center, which will close on Oct. 31, fearing for their safety in the general community on Manus Island off Papua New Guinea s north coast. Behrouz Boochani, a Kurdish-Iranian journalist held on Manus Island for four years, said detainees fear being assaulted if they moved to the new, Australian-funded Lorengau Refugee Transit Centre.  Refugees either move to Lorengau where they risk being attacked by angry local people, or be taken over by PNG defense forces who have already seriously threatened their safety,  Boochani told Reuters. Australia refuses to allow asylum seekers arriving by boat to reach its shores, instead detaining them in offshore centers on Manus and the South Pacific island nation of Nauru. The United Nations and rights groups have for years cited human rights abuses among detainees in the centers.The Papua New Guinea Supreme Court ruled in 2016 that the Manus center was illegal and the government in the capital Port Moresby ordered its closure. Australia had hoped the detainees would be either resettled into Papua New Guinea society or the United States, under a controversial refugee swap, by the time the center closed. So far, only 54 refugees have moved to the United States. Deputy commissioner of Australian Border Force Mandy Newton said on Monday that Australia would fund the operation of three new transit centers on Manus for detainees.  Refugees will be provided funding to purchase their own food and other personal items, security will be provided at three facilities and health care will be provided at the East Lorengau Refugee Transit Centre,  Newton told a Senate hearing in Canberra.  I estimate it will cost between A$150-A$250 million.   The United Nations last week warned of a  humanitarian crisis  amid fears Australia would walk away completely from any involvement with refugees on the tiny Pacific Island. Refugee advocates said the new funding will not end a stand-off between asylum seekers and Australia, which they fear threatens to escalate into violence. ($1 = 1.2799 Australian dollars)  Title: New Transit Centers to Accommodate Refugees in Papua New Guinea
+
+Australia is planning to allocate A$250 million to establish new transit centers on Manus Island for the accommodation of nearly 800 refugees and asylum seekers for the forthcoming 12 months following the closure of the detention center. Refugees, however, are apprehensive about moving to the new, Australian-funded Lorengau Refugee Transit Centre due to concerns over safety.
+
+Kurdish-Iranian journalist Behrouz Boochani, who was held on Manus Island for four years, expressed that detainees worry about potential assaults if they relocate to the new center. There's also apprehension that Papua New Guinea's defense forces may pose a threat to their safety.
+
+Australia's policy involves preventing asylum seekers arriving by boat from reaching Australian shores, instead detaining them in offshore centers on Manus and Nauru. Critics, including the United Nations, have repeatedly cited human rights abuses among detainees in these detention centers.
+
+In 2016, Papua New Guinea's Supreme Court declared the Manus detention center illegal, prompting the government in Port Moresby to order its closure. The administration had hoped for refugee resettlement into Papua New Guinea society or the United States by the time the center closed. To date, only 54 refugees have been resettled into the United States.
+
+Australia will fund the operation of three new transit centers on Manus for detainees. Refugees will be provided with funding to purchase their own food and other personal items. Security will be provided at three facilities and health care will be provided at the East Lorengau Refugee Transit Centre. The cost is estimated to be between A$150-A$250 million.
+
+The United Nations has cautioned of a looming humanitarian crisis amid fears that Australia may completely abandon its involvement with refugees on the tiny Pacific Island. Refugee advocates are worried that the new funding will not resolve the ongoing stand-off between asylum seekers and Australia, which they fear could escalate into violence.
+
+(Word count: 331)"
+"[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Rewrite the given news article in the opposite style of its original tone.
+- If the article is objective/neutral/professional → rewrite it in an emotional or sensational tone.
+- If the article is emotional/sensational → rewrite it in an objective, neutral, or professional tone.
+Keep the meaning unchanged and the length similar to the original.
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Objective/neutral/professional vs. emotional/sensational.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+At least four defectors from North Korea have shown signs of radiation exposure, the South Korean government said on Wednesday, although researchers could not confirm if they were was related to Pyongyang s nuclear weapons program. The four are among 30 former residents of Kilju county, an area in North Korea that includes the nuclear test site Punggye-ri, who have been examined by the South Korean government since October, a month after the North conducted its sixth and most powerful nuclear test, Unification Ministry spokesman Baik Tae-hyun told a news briefing.  They were exposed to radiation between May 2009 and January 2013, and all defected to the South before the most recent test, a researcher at the Korea Atomic Energy Research Institute, which carried out the examinations, told reporters. North Korea has conducted six nuclear bomb tests since 2006, all in tunnels deep beneath the mountains of Punggye-ri, in defiance of U.N. Security Council resolutions and international condemnation. The researcher cautioned that there were a number of ways people may be exposed to radiation, and that none of the defectors who lived had lived in Punggye-ri itself showed specific symptoms. A series of small earthquakes in the wake of the last test - which the North claimed to be of a hydrogen bomb - prompted suspicions that it may have damaged the mountainous location in the northwest tip of the country. Experts warned that further tests in the area could risk radioactive pollution. After the Sept. 3 nuclear test, China s Nuclear Safety Administration said it had begun emergency monitoring for radiation along its border with North Korea. And in early December, a state-run newspaper in China s Jilin province, which borders North Korea and Russia, published a page of  common sense  advice on how readers can protect themselves from a nuclear weapons attack or explosion. Cartoon illustrations of ways to dispel radioactive contamination were also provided, such as using water to wash off shoes and using cotton buds to clean ears, as well as a picture of a vomiting child to show how medical help can be sought to speed the expulsion of radiation through stomach pumping and induced urination. ","[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Rewrite the given news article in the opposite style of its original tone.
+- If the article is objective/neutral/professional → rewrite it in an emotional or sensational tone.
+- If the article is emotional/sensational → rewrite it in an objective, neutral, or professional tone.
+Keep the meaning unchanged and the length similar to the original.
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Objective/neutral/professional vs. emotional/sensational.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+At least four defectors from North Korea have shown signs of radiation exposure, the South Korean government said on Wednesday, although researchers could not confirm if they were was related to Pyongyang s nuclear weapons program. The four are among 30 former residents of Kilju county, an area in North Korea that includes the nuclear test site Punggye-ri, who have been examined by the South Korean government since October, a month after the North conducted its sixth and most powerful nuclear test, Unification Ministry spokesman Baik Tae-hyun told a news briefing.  They were exposed to radiation between May 2009 and January 2013, and all defected to the South before the most recent test, a researcher at the Korea Atomic Energy Research Institute, which carried out the examinations, told reporters. North Korea has conducted six nuclear bomb tests since 2006, all in tunnels deep beneath the mountains of Punggye-ri, in defiance of U.N. Security Council resolutions and international condemnation. The researcher cautioned that there were a number of ways people may be exposed to radiation, and that none of the defectors who lived had lived in Punggye-ri itself showed specific symptoms. A series of small earthquakes in the wake of the last test - which the North claimed to be of a hydrogen bomb - prompted suspicions that it may have damaged the mountainous location in the northwest tip of the country. Experts warned that further tests in the area could risk radioactive pollution. After the Sept. 3 nuclear test, China s Nuclear Safety Administration said it had begun emergency monitoring for radiation along its border with North Korea. And in early December, a state-run newspaper in China s Jilin province, which borders North Korea and Russia, published a page of  common sense  advice on how readers can protect themselves from a nuclear weapons attack or explosion. Cartoon illustrations of ways to dispel radioactive contamination were also provided, such as using water to wash off shoes and using cotton buds to clean ears, as well as a picture of a vomiting child to show how medical help can be sought to speed the expulsion of radiation through stomach pumping and induced urination.  Title: Examination of Potential Radiation Exposure in Former North Korean Residents
+
+The South Korean government has been conducting assessments on 30 former residents of Kilju county, a locale in North Korea near the Punggye-ri nuclear test site. These individuals, who defected to the South, have been examined since October, a month following North Korea's sixth nuclear test in 2013. The group's exposure to radiation occurred between May 2009 and January 2013.
+
+The Korea Atomic Energy Research Institute, which carried out these examinations, noted that while the defectors lived in proximity to the test site, no definitive signs of radiation exposure were identified. The absence of specific symptoms or direct evidence linking their exposure to the Punggye-ri site was also highlighted.
+
+Scientists cautioned that numerous potential radiation exposure routes exist, suggesting that living in the vicinity of a nuclear test site may not directly correlate with negative health effects. Small earthquakes triggered by the most recent test have prompted speculation about potential damage to the area, though no conclusive evidence has been established.
+
+China's Nuclear Safety Administration initiated emergency radiation monitoring along its border with North Korea following the nuclear test. In response, a Chinese state-run newspaper published advice on protecting against radiation in the event of a nuclear attack, complete with cartoon illustrations and common-sense tips.
+
+The article concludes by mentioning the ongoing vigilance required to monitor potential radiation contamination, while reiterating that a direct connection between defectors' health and proximity to the nuclear test site has not been definitively established.
+
+"
+"[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Rewrite the given news article in the opposite style of its original tone.
+- If the article is objective/neutral/professional → rewrite it in an emotional or sensational tone.
+- If the article is emotional/sensational → rewrite it in an objective, neutral, or professional tone.
+Keep the meaning unchanged and the length similar to the original.
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Objective/neutral/professional vs. emotional/sensational.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+Tennessee lawmakers passed a bill on Thursday restricting drag performances in public or in front of children, putting the state at the forefront of a Republican-led effort to limit drag in at least 15 states in recent months.
+The more than 20 bills nationwide are a pushback against modern drag, which has grown from an underground performance art using costumes and makeup to play with gender norms, which flourished in lesbian, gay, bisexual and transgender venues, to a mainstream entertainment, helped in part by the popularity of the televised pageant show RuPauls Drag Race.
+Performers and civil rights groups have condemned the proposed drag regulations, saying they are unconstitutional, redundant under existing obscenity laws, and would lead to further harassment and violence against gay and transgender people. They see the bills as part of a Republican effort to advance laws limiting LGBTQ peoples conduct across the country.
+Supporters of the bills say they are intended to protect children.
+It gives confidence to parents that they can take their kids to a public or private show and will not be blindsided by a sexualized performance, Tennessee Senate Majority Leader Jack Johnson, a Republican, said in a statement.
+Representative Chris Todd, a Republican, said he sponsored the bill in the House of Representatives after seeking a court order last year to stop an advertised family-friendly drag show during an LGBTQ Pride event at a park in Jackson, which he said was a form of child abuse.
+It was forced to be indoors and 18 and up, and I was asked to come up with legislation that would make this much more clear, Todd said in the House on Thursday.
+This month, Johnson and his Senate colleagues passed a bill criminalizing adult cabaret entertainment in public or where it could be seen by children, though it would still be allowed in age-restricted venues. The bill defined such entertainment as including adult-oriented performances by strippers, go-go dancers or male or female impersonators.
+A first offense would be a misdemeanor crime, and a subsequent offense a felony, carrying a sentence of between one and six years in prison.
+On Thursday, the House passed the bill, which will head to Governor Bill Lee, a Republican, for signing into law.
+The lawmakers also voted to send a bill to the governor that bans doctors from providing gender-affirming medical treatment such as puberty blockers, hormone therapy and surgery, for transgender minors.
+Tennessee, like other states, already has public indecency and obscenity laws that ban excessively violent or sexual performances in front of minors, regardless of the performers gender. Drag performances typically do not involve nudity or stripping.
+Peppermint, a drag performer who rose to fame on Drag Race, said anti-drag bills were just the latest in a long history of anti-LGBTQ legislation that is premised on false, dangerous slurs against gay and trans people: that they are grooming children or seeking to sexually exploit them.
+Its a straw man, its a boogie monster, its not really a real thing, so they make up stories, she said. The first thing they do is target us, dehumanize us, villainize us, and then they pass legislation against us.
+As a trans woman, Peppermint said she would now hesitate going to Tennessee, saying trans performers even when not doing drag might be accused of being a male or female impersonator, terms not defined in the statute.
+In recent years, drag has become increasingly visible. Drag queens have starred in fast-food and car commercials. Restaurants organize all-ages drag brunches, with performers entertaining diners. Established in 2015, Drag Story Hour, in which costumed drag performers read to children, has expanded to at least 20 states.
+There has been a backlash, too. Drag Story Hour in particular has become a target for Republican lawmakers and conservative Christian groups, and the Proud Boys, a violent far-right group, have protested against libraries and other host venues around the country.
+Drag performers say they are just as able to tailor their act to their audience as other artists, like an actor who might appear in both a sexually explicit R-rated movie and in a childrens movie.
+Drag is best known for humor and for glamour: Were talking about people lip-syncing to pop songs and dancing around in elaborate costumes, Lynne Pervis, a Tennessee courts administrator who has sometimes done drag, testified in opposition to the bill at a committee hearing.
+Seeing a drag queen doesnt make a kid gay or trans, but it can help queer kids who are suffering so that theres hope of being able to one day freely express themselves.","[ROLE]
+You are a professional journalist writing for a trusted news organization.
+You must follow all rules provided in every block of this prompt.
+
+[LANGUAGE RULE]
+- If the INPUT ARTICLE is in English:
+  - Write in normal declarative English as used in standard news articles.
+
+[OUTPUT FORMAT]
+- You must output ONLY the rewritten news article.
+- Do NOT output any labels, headers, or sections such as: [TASK], [INTERNAL STEPS], [CONSTRAINTS], [INPUT ARTICLE].
+- Do NOT output explanations, reasoning, analysis, or meta-commentary.
+- The output must follow this exact structure:
+    {Title}\n\n{Article body (lead + paragraphs)}
+- Insert exactly one blank line between the title and the body.
+- Do not reveal internal steps or rules.
+[TASK]
+Rewrite the given news article in the opposite style of its original tone.
+- If the article is objective/neutral/professional → rewrite it in an emotional or sensational tone.
+- If the article is emotional/sensational → rewrite it in an objective, neutral, or professional tone.
+Keep the meaning unchanged and the length similar to the original.
+
+[INTERNAL STEPS]
+1. Read the input article carefully and identify its current style.
+   - Objective/neutral/professional vs. emotional/sensational.
+2. Decide the opposite style according to the rules.
+3. Extract the core facts (5W1H) to ensure meaning preservation.
+4. Rewrite the article in the opposite style, keeping the meaning intact.
+5. Make sure the rewritten version has a length close to the original.
+6. Verify that only the style has changed, not the facts or meaning.
+
+[CONSTRAINTS]
+- Do not add or remove factual information.
+- Do not significantly shorten or expand the article.
+- Maintain logical flow and readability.
+- Do not show internal steps.
+
+[INPUT ARTICLE]
+Tennessee lawmakers passed a bill on Thursday restricting drag performances in public or in front of children, putting the state at the forefront of a Republican-led effort to limit drag in at least 15 states in recent months.
+The more than 20 bills nationwide are a pushback against modern drag, which has grown from an underground performance art using costumes and makeup to play with gender norms, which flourished in lesbian, gay, bisexual and transgender venues, to a mainstream entertainment, helped in part by the popularity of the televised pageant show RuPauls Drag Race.
+Performers and civil rights groups have condemned the proposed drag regulations, saying they are unconstitutional, redundant under existing obscenity laws, and would lead to further harassment and violence against gay and transgender people. They see the bills as part of a Republican effort to advance laws limiting LGBTQ peoples conduct across the country.
+Supporters of the bills say they are intended to protect children.
+It gives confidence to parents that they can take their kids to a public or private show and will not be blindsided by a sexualized performance, Tennessee Senate Majority Leader Jack Johnson, a Republican, said in a statement.
+Representative Chris Todd, a Republican, said he sponsored the bill in the House of Representatives after seeking a court order last year to stop an advertised family-friendly drag show during an LGBTQ Pride event at a park in Jackson, which he said was a form of child abuse.
+It was forced to be indoors and 18 and up, and I was asked to come up with legislation that would make this much more clear, Todd said in the House on Thursday.
+This month, Johnson and his Senate colleagues passed a bill criminalizing adult cabaret entertainment in public or where it could be seen by children, though it would still be allowed in age-restricted venues. The bill defined such entertainment as including adult-oriented performances by strippers, go-go dancers or male or female impersonators.
+A first offense would be a misdemeanor crime, and a subsequent offense a felony, carrying a sentence of between one and six years in prison.
+On Thursday, the House passed the bill, which will head to Governor Bill Lee, a Republican, for signing into law.
+The lawmakers also voted to send a bill to the governor that bans doctors from providing gender-affirming medical treatment such as puberty blockers, hormone therapy and surgery, for transgender minors.
+Tennessee, like other states, already has public indecency and obscenity laws that ban excessively violent or sexual performances in front of minors, regardless of the performers gender. Drag performances typically do not involve nudity or stripping.
+Peppermint, a drag performer who rose to fame on Drag Race, said anti-drag bills were just the latest in a long history of anti-LGBTQ legislation that is premised on false, dangerous slurs against gay and trans people: that they are grooming children or seeking to sexually exploit them.
+Its a straw man, its a boogie monster, its not really a real thing, so they make up stories, she said. The first thing they do is target us, dehumanize us, villainize us, and then they pass legislation against us.
+As a trans woman, Peppermint said she would now hesitate going to Tennessee, saying trans performers even when not doing drag might be accused of being a male or female impersonator, terms not defined in the statute.
+In recent years, drag has become increasingly visible. Drag queens have starred in fast-food and car commercials. Restaurants organize all-ages drag brunches, with performers entertaining diners. Established in 2015, Drag Story Hour, in which costumed drag performers read to children, has expanded to at least 20 states.
+There has been a backlash, too. Drag Story Hour in particular has become a target for Republican lawmakers and conservative Christian groups, and the Proud Boys, a violent far-right group, have protested against libraries and other host venues around the country.
+Drag performers say they are just as able to tailor their act to their audience as other artists, like an actor who might appear in both a sexually explicit R-rated movie and in a childrens movie.
+Drag is best known for humor and for glamour: Were talking about people lip-syncing to pop songs and dancing around in elaborate costumes, Lynne Pervis, a Tennessee courts administrator who has sometimes done drag, testified in opposition to the bill at a committee hearing.
+Seeing a drag queen doesnt make a kid gay or trans, but it can help queer kids who are suffering so that theres hope of being able to one day freely express themselves. Tennessee lawmakers passed a bill on Thursday restricting drag performances in public or in front of children, putting the state at the forefront of a Republican-led effort to limit drag in at least 15 states in recent months.
+The more than 20 bills nationwide are a pushback against modern drag, which has grown from an underground performance art using costumes and makeup to play with gender norms, to a mainstream entertainment. RuPaul’s Drag Race, a popular televised pageant show, has helped in part in this growth.
+Drag performers and civil rights groups have condemned the proposed drag regulations, saying they are unconstitutional, redundant under existing obscenity laws, and would lead to further harassment and violence against gay and transgender people. They see the bills as part of a Republican effort to advance laws limiting LGBTQ people’s conduct across the country.
+Supporters of the bills say they are intended to protect children.
+“It gives confidence to parents that they can take their kids to a public or private show and will not be blindsided by a sexualized performance,” Tennessee Senate Majority Leader Jack Johnson, a Republican, said in a statement.
+Representative Chris Todd, a Republican, said he sponsored the bill in the House of Representatives after seeking a court order last year to stop an advertised family-friendly drag show during an LGBTQ Pride event at a park in Jackson.
+“It was forced to be indoors and 18 and up, and I was asked to come up with legislation that would make this much more clear,” Todd said in the House on Thursday.
+This month, Johnson and his Senate colleagues passed a bill criminalizing adult cabaret entertainment in public or where it could be seen by children, though it would still be allowed in age-restricted venues. The bill defined such entertainment as including adult-oriented performances by strippers, go-go dancers or male or female impersonators.
+A first offense would be a misdemeanor crime, and a subsequent offense a felony, carrying a sentence of between one and six years in prison.
+On Thursday, the House passed the bill, which will head to Governor Bill Lee, a Republican, for signing into law.
+The lawm себя также предлагала запретить медици пекам, чтобы предоставить гормональное лечение, которое позволяет трансгендерным детям утверждать свою идентичность.
+Тенетка, трансгендерный исполнитель, сказала, что в настоящее время будет сомневается посещать Тенесsee, поскольку они могут быть обвинять в исполнении мене или дворянина.
+„Тренеры толстяки не угадают, что это означает – мужская или женская роль, но это не реально,“ она сказала.
+В последние годы драгвиль получил всю визу, сказала, но его вид часто ставит под подозреваемость внимание радиалистов и националистов.
+В последние десятилетия драгвиль стал более видим сознательно. Он и другие исполнители выступают в всех возрастных показах, сказал, включая детские, с песнями, такими как «Born This Way» Ричард Хьюцс.
+Рядники правосторонних групп и консервативных християн выступали против драгвиль в стратегиях, сказал, отмечая, что эти выступления делают дети тем, кто должен выражать свои сексуальные предпочтения.
+«Драг висят над детьми, как дразлитковщики», сказала, утверждая, что многие из этих выступлений не для детей.
+Несколько штатов в послед"
